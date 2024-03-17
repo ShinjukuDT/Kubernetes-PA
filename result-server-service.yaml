@@ -1,0 +1,14 @@
+# result-server-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: result-server-service
+  namespace: my-apps
+spec:
+  selector:
+    app: result-server
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer
